@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aitucritic - Главная</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary px-4 py-3">
+      <div class="container-fluid">
+        <!-- Логотип -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="homepage.html">
+          <img src="images/movielogo.png" alt="logo" style="width: 40px; height: auto;">
+          <span class="fw-bold fs-4">Aitucritic</span>
+        </a>
+  
+        <!-- Кнопка-бургер -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Содержимое, которое скрывается на мобилах -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <!-- Поиск -->
+          <form class="d-flex mx-auto my-2" style="max-width:600px; width:100%;">
+            <input
+              class="form-control me-2 bg-dark text-white border-secondary rounded-pill px-3"
+              type="search"
+              placeholder="Search movies..."
+              aria-label="Search"
+            >
+            <button class="btn btn-danger rounded-pill px-4" type="submit">Search</button>
+          </form>
+  
+          <!-- Ссылки и кнопки справа -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="watchlist.html">Watchlist</a>
+            </li>
+            <li class="nav-item" id="authLink">
+              <a class="nav-link" href="login.html">Login/Signup</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-light" onclick="toggleTheme()">
+                Toggle Theme
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  
+
+  <section class="banner">
+    <div class="banner-arrow left">&#10094;</div>
+
+    <div class="slides">
+        <div class="slide active" style="background-image: url('images/avengers.jpg');">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <span class="genre">Action | Adventure | Sci-Fi</span>
+                    <h2>Avengers: Endgame</h2>
+                    <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more to reverse Thanos' actions and restore balance to the universe.</p>
+                   <button class="trailer-btn btn btn-danger" 
+                   data-trailer-url="https://www.youtube.com/embed/TcMBFSGVi1c?autoplay=1">
+                   Watch Trailer
+                   </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('images/Dune-Movie-Official-Poster-banner-feature.jpg');">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <span class="genre">Adventure | Drama | Sci-Fi</span>
+                    <h2>Dune: Part Two</h2>
+                    <p>Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.</p>
+                  
+<button 
+class="trailer-btn btn btn-danger" 
+data-trailer-url="https://www.youtube.com/embed/Way9Dexny3w?autoplay=1">
+Watch Trailer
+</button>
+
+                </div>
+            </div>
+        </div>
+    </div> <div class="banner-arrow right">&#10095;</div>
+</section>
+
+  <!-- Секция "Top Rated" -->
+  <section class="movies-section">
+    <div class="section-header">
+      <h2>Top Rated</h2>
+      <a href="#">See More</a>
+    </div>
+    
+    <div class="movies-container">
+      <!-- Стрелка прокрутки влево -->
+      <div class="movies-arrow left">&#10094;</div>
+      
+      <!-- Горизонтальный список карточек -->
+      <div class="movies-grid" id="topRatedGrid">
+        <!-- Карточка фильма 1 -->
+        <div class="movie-card">
+          <img src="images/shawshank.jpg" alt="The Shawshank Redemption">
+          <h3>The Shawshank Redemption</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 9.3</span>
+            <span class="runtime">&#128338; 2h 22m</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 2 -->
+        <div class="movie-card">
+          <img src="images/schindlerlist.png" alt="Schindler's List">
+          <h3>Schindler's List</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 9.0</span>
+            <span class="runtime">&#128338; 3h 15m</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 3 -->
+        <div class="movie-card">
+          <img src="images/darkknight.jpg" alt="The Dark Knight">
+          <h3>The Dark Knight</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 9.0</span>
+            <span class="runtime">&#128338; 2h 32m</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 4 -->
+        <div class="movie-card">
+          <a href="movieabout.html">
+          <img src="images/interstellarposter.webp" alt="Interstellar">
+        </a>
+          <h3>Interstellar</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 8.6</span>
+            <span class="runtime">&#128338; 2h 49m</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+      </div>
+      
+      
+      <!-- Стрелка прокрутки вправо -->
+      <div class="movies-arrow right">&#10095;</div>
+    </div>
+  </section>
+  
+  <!-- Секция "New Releases" -->
+  <section class="movies-section">
+    <div class="section-header">
+      <h2>New Releases</h2>
+      <a href="#">See More</a>
+    </div>
+    
+    <div class="movies-container">
+      <!-- Стрелка прокрутки влево -->
+      <div class="movies-arrow left">&#10094;</div>
+      
+      <!-- Горизонтальный список карточек -->
+      <div class="movies-grid" id="newReleasesGrid">
+        <!-- Карточка фильма 1 -->
+        <div class="movie-card">
+          <img src="images/new-official-poster-for-snow-white-v0-lq51fbddin4e1.jpeg.webp" alt="SnowWhite">
+          <h3>ShowWhite</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 1.7</span>
+            <span class="runtime">&#128338; 1h 49m</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 2 -->
+        <div class="movie-card">
+          <img src="images/A_Minecraft_Movie_poster.jpg" alt="Minecraft Movie">
+          <h3>Minecraft Movie</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 6.1</span>
+            <span class="runtime">&#128338; 1h 41m</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 3 -->
+        <div class="movie-card">
+          <img src="images/electricstate.jpeg" alt="The Electric State">
+          <h3>The Electric State</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 6.0</span>
+            <span class="runtime">&#128338; 1h 48m</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 4 -->
+        <div class="movie-card">
+          <img src="images/captainamerica.png" alt="Captain America Brave New World">
+          <h3>Captain America: Brave New World</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 6.0</span>
+            <span class="runtime">&#128338; 1h 42m</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+      </div>
+
+      <!-- Стрелка прокрутки вправо -->
+      <div class="movies-arrow right">&#10095;</div>
+    </div>
+  </section>
+
+
+  <!-- Секция "Ongoing Series " -->
+  <section class="movies-section">
+    <div class="section-header">
+      <h2>Ongoing Series </h2>
+      <a href="#">See More</a>
+    </div>
+    
+    <div class="movies-container">
+      <!-- Стрелка прокрутки влево -->
+      <div class="movies-arrow left">&#10094;</div>
+      
+      <!-- Горизонтальный список карточек -->
+      <div class="movies-grid" id="newReleasesGrid">
+        <!-- Карточка фильма 1 -->
+        <div class="movie-card">
+          <img src="images/sololeveling.png" alt="Solo Leveling">
+          <h3>Solo Leveling</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 8.5</span>
+            <span class="runtime">&#128338; S2.E12</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 2 -->
+        <div class="movie-card">
+          <img src="images/daredevil.jpg" alt="Daredevil: Born Again">
+          <h3>Daredevil: Born Again</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 8.7</span>
+            <span class="runtime">&#128338; S1.E6</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 3 -->
+        <div class="movie-card">
+          <img src="images/invincible.png" alt="Invincible">
+          <h3>Invincible</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 8.7</span>
+            <span class="runtime">&#128338; S3.E8</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 4 -->
+        <div class="movie-card">
+          <img src="images/theboys.jpg" alt="The Boys">
+          <h3>The Boys</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 8.6</span>
+            <span class="runtime">&#128338; S3.E6</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+      </div>
+
+      <!-- Стрелка прокрутки вправо -->
+      <div class="movies-arrow right">&#10095;</div>
+    </div>
+  </section>
+
+
+  <!-- Секция "Recommended" -->
+  <section class="movies-section">
+    <div class="section-header">
+      <h2>Recommended</h2>
+      <a href="#">See More</a>
+    </div>
+    
+    <div class="movies-container">
+      <!-- Стрелка прокрутки влево -->
+      <div class="movies-arrow left">&#10094;</div>
+      
+      <!-- Горизонтальный список карточек -->
+      <div class="movies-grid" id="RecommendedGrid">
+        <!-- Карточка фильма 1 -->
+        <div class="movie-card">
+          <img src="images/strangerthings.jpg" alt="Stranger Things">
+          <h3>Stranger Things</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 8.6</span>
+            <span class="runtime">&#128338; S4.E7</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 2 -->
+        <div class="movie-card">
+          <img src="images/breakingbad.jpg" alt="Breaking Bad">
+          <h3>Breaking Bad</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 9.5</span>
+            <span class="runtime">&#128338; S5.E14</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 3 -->
+        <div class="movie-card">
+          <img src="images/oppenheimer.jpg" alt="Oppenheimer">
+          <h3>Oppenheimer</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 8.4</span>
+            <span class="runtime">&#128338; 3h 00m</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+        <!-- Карточка фильма 4 -->
+        <div class="movie-card">
+          <img src="images/anora.png" alt="Anora">
+          <h3>Anora</h3>
+          <div class="movie-meta">
+            <span class="rating">&#9733; 7.6</span>
+            <span class="runtime">&#128338; 2h 19m</span>
+          </div>
+          <button class="watchlist-btn">+ Watchlist</button>
+        </div>
+      </div>
+
+      <!-- Стрелка прокрутки вправо -->
+      <div class="movies-arrow right">&#10095;</div>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="jquery-homepage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Trailer Modal -->
+<div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="trailerModalLabel">Trailer</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe 
+            id="trailerIframe" 
+            src="" 
+            title="Movie Trailer" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="homepage.js"></script>
+
+</body>
+<footer>
+  <div class="footer-container">
+    <!-- Колонка 1: Home -->
+    <div class="footer-col">
+      <h3>Home</h3>
+      <ul>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Колонка 2: Movies -->
+    <div class="footer-col">
+      <h3>Movies</h3>
+      <ul>
+        <li><a href="#">Genres</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">New Release</a></li>
+        <li><a href="#">Popular</a></li>
+      </ul>
+    </div>
+
+    <!-- Колонка 3: Shows -->
+    <div class="footer-col">
+      <h3>Shows</h3>
+      <ul>
+        <li><a href="#">Genres</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">New Release</a></li>
+        <li><a href="#">Popular</a></li>
+      </ul>
+    </div>
+
+    <!-- Колонка 4: Support -->
+    <div class="footer-col">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="support.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Колонка 5: Connect With Us -->
+    <div class="footer-col">
+      <h3>Connect With Us</h3>
+      <div class="social-icons">
+      
+        <a href="#" class="social-icon"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#" class="social-icon"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="#" class="social-icon"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<!-- Visit counter -->
+<div id="visitCountDisplay" class="text-center mb-2" style="opacity:.8;">
+ </div>
+ 
+
+   <div class="footer-bottom">
+     <span>©2025 Aitucritic. All Rights Reserved</span>
+     <div class="footer-links">
+
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+</html>

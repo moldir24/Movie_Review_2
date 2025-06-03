@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Movie Page</title>
+  <!-- Bootstrap CSS (v5) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="movieabout.css" />
+</head>
+<body class="text-white">
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Assignment 4 Interactivity -->
+<script src="assignment4.js"></script>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary px-4 py-3">
+      <div class="container-fluid">
+        <!-- Логотип -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="homepage.html">
+          <img src="images/movielogo.png" alt="logo" style="width: 45px; height: auto;">
+          <span class="fw-bold fs-4">Aitucritic</span>
+        </a>
+    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <form class="d-flex mx-auto my-2" style="max-width: 600px; width: 100%;">
+            <input class="form-control me-2 bg-dark text-white border-secondary rounded-pill px-3" type="search" placeholder="Search movies..." aria-label="Search">
+            <button class="btn btn-danger rounded-pill px-4" type="submit">Search</button>
+          </form>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="watchlist.html">Watchlist</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="login.html">Login/Signup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">EN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <!-- Section 1: Poster & Trailer -->
+    <section class="mb-5">
+      <!-- flex-nowrap чтобы не переносилось вниз -->
+      <div class="row flex-nowrap">
+        <!-- Левая колонка: Название и Постер -->
+        <div class="col-6 poster-column d-flex flex-column align-items-start">
+          <h1 class="movie-title">Interstellar</h1>
+          <img
+            src="images/interstellarposter.webp"
+            alt="Interstellar Poster"
+            class="img-fluid poster-image"
+          />
+        </div>
+
+        <!-- Трейлер -->
+        <div class="col-6 trailer-column d-flex align-items-center justify-content-center">
+          <div class="ratio ratio-16x9 trailer-embed">
+            <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E" title="Interstellar Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Description, Cast, Reviews, Add Review, Movie Info -->
+    <section class="row">
+      <!--left column: description, cast, reviews, add review -->
+      <div class="col-md-8">
+       
+        <section class="description mb-4">
+          <h5>Description</h5>
+          <p>When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot,Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.
+          </p>
+        </section>
+
+        <!-- Cast Section -->
+        <section class="cast mb-4">
+          <h5>Cast</h5>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="cast-item text-center">
+              <img src="images/matthew.png" alt="Actor 1" class="rounded" >
+              <p>Matthew McConaughey</p>
+            </div>
+            <div class="cast-item text-center">
+              <img src="images/annehathaway.png" alt="Actor 2" class="rounded">
+              <p>Anne Hathaway</p>
+            </div>
+            <div class="cast-item text-center">
+              <img src="images/jessicachastain.png" alt="Actor 3" class="rounded">
+              <p>Jessica Chastain</p>
+            </div>
+            <div class="cast-item text-center">
+              <img src="images/mackenzie.png" alt="Actor 4" class="rounded" >
+              <p>Mackenzie Foy</p>
+            </div>
+            <div class="cast-item text-center">
+              <img src="images/timothee.png" alt="Actor 5" class="rounded">
+              <p>Timothée Chalamet</p>
+            </div>
+            <div class="cast-item text-center">
+              <img src="images/jogn.png" alt="Actor 6" class="rounded" >
+              <p>John Lithgow</p>
+            </div>
+          
+          </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews mb-4">
+          <h5>Reviews</h5>
+          <!-- after your reviews section -->
+<nav aria-label="Reviews pagination">
+  <ul class="pagination justify-content-center mt-3" id="reviewsPagination"></ul>
+</nav>
+
+         
+
+        <!-- Add Your Review Form -->
+        <section class="add-review mb-4">
+          <h5>Add Your Review</h5>
+          <form>
+            <div class="mb-3">
+              <label for="reviewName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="reviewName" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label for="reviewText" class="form-label">Your Review</label>
+              <textarea class="form-control" id="reviewText" rows="3" placeholder="Write your review..."></textarea>
+            </div>
+            <!-- Поле для выбора рейтинга -->
+             <div class="mb-3">
+              <label for="reviewRating" class="form-label">Rating</label>
+              <div id="reviewRating" class="star-rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span> 
+                <span class="star" data-value="5">&#9733;</span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-danger">Submit</button>
+          </form>
+        </section>
+
+        <script src="movieabout.js"></script>
+      </div>
+
+      <!-- RIGHT COLUMN: Movie Info -->
+      <div class="col-md-4">
+        <section class="movie-info p-3 mt-4">
+          <!-- Верхняя строка: Рейтинг -->
+          <div class="info-rating d-flex align-items-center justify-content-end mb-3">
+            <i class="fa fa-star text-warning fs-5"></i>
+            <span class="fs-5">8.5</span>
+            <small class="text-muted ms-2">350k Reviews</small>
+          </div>
+          <hr class="border-secondary" />
+          <!-- Released Year -->
+          <div class="info-item d-flex align-items-center mb-3">
+            <i class="fa fa-calendar me-2 text-secondary"></i>
+            <div>
+              <h6 class="mb-0">Released Year</h6>
+              <p class="mb-0 text-muted">2014</p>
+            </div>
+          </div>
+        
+          <hr class="border-secondary">
+        
+          <!-- Available Languages -->
+          <div class="info-item mb-3">
+            <h6>Available Languages</h6>
+            <div class="d-flex flex-wrap gap-2 mt-1">
+              <span class="badge bg-secondary">English</span>
+              <span class="badge bg-secondary">French</span>
+              <span class="badge bg-secondary">Portuguese</span>
+              <span class="badge bg-secondary">German</span>
+              <span class="badge bg-secondary">Russian</span>
+            </div>
+          </div>
+        
+          <hr class="border-secondary">
+        
+          <!-- Ratings -->
+          <div class="info-item mb-3">
+            <h6>Ratings</h6>
+            <div class="d-flex flex-wrap gap-3 mt-1">
+              <!-- IMDb -->
+              <div class="d-flex align-items-center gap-2">
+                <img src="images/channels4_profile.jpg" alt="IMDb" style="width: 40px; height:auto;">
+                <span class="text-white">8.6</span>
+                <span class="text-danger">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+              </div>
+              <!-- Кинопоиск -->
+              <div class="d-flex align-items-center gap-2">
+                <img src="images/icon-kp.png" alt="Кинопоиск" style="width: 40px; height:auto;">
+                <span class="text-white">8.2</span>
+                <span class="text-danger">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+              </div>
+            </div>
+          </div>
+        
+          <hr class="border-secondary">
+        
+          <!-- Genres -->
+          <div class="info-item mb-3">
+            <h6>Genres</h6>
+            <div class="d-flex flex-wrap gap-2 mt-1">
+              <span class="badge bg-secondary">Sci-Fi</span>
+              <span class="badge bg-secondary">Adventure</span>
+              <span class="badge bg-secondary">Drama</span>
+            </div>
+          </div>
+        
+          <hr class="border-secondary">
+        
+          <!-- Director with photo -->
+          <div class="info-item d-flex align-items-center gap-3 mb-3">
+            <div>
+              <img src="images/nolan.png" alt="Christopher Nolan" 
+                   class="rounded-circle" style="width:60px; height:60px; object-fit:cover;">
+            </div>
+            <div>
+              <h6 class="mb-0">Director</h6>
+              <p class="mb-0 text-muted">Christopher Nolan<br>From England</p>
+            </div>
+          </div>
+        
+          <hr class="border-secondary">
+        
+          <!-- Composer with photo -->
+          <div class="info-item d-flex align-items-center gap-3">
+            <div>
+              <img src="images/Hans_zimmer1.webp" alt="Hans Zimmer" 
+                   class="rounded-circle" style="width:60px; height:60px; object-fit:cover;">
+            </div>
+            <div>
+              <h6 class="mb-0">Music</h6>
+              <p class="mb-0 text-muted">Hans Zimmer<br>From Germany</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</main>  
+<div class="footer-container">
+  <!-- Колонка 1: Home -->
+  <div class="footer-col">
+    <h3>Home</h3>
+    <ul>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </div>
+
+  <!-- Колонка 2: Movies -->
+  <div class="footer-col">
+    <h3>Movies</h3>
+    <ul>
+      <li><a href="#">Genres</a></li>
+      <li><a href="#">Trending</a></li>
+      <li><a href="#">New Release</a></li>
+      <li><a href="#">Popular</a></li>
+    </ul>
+  </div>
+
+  <!-- Колонка 3: Shows -->
+  <div class="footer-col">
+    <h3>Shows</h3>
+    <ul>
+      <li><a href="#">Genres</a></li>
+      <li><a href="#">Trending</a></li>
+      <li><a href="#">New Release</a></li>
+      <li><a href="#">Popular</a></li>
+    </ul>
+  </div>
+
+  <!-- Колонка 4: Support -->
+  <div class="footer-col">
+    <h3>Support</h3>
+    <ul>
+      <li><a href="support.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- Колонка 5: Connect With Us -->
+  <div class="footer-col">
+    <h3>Connect With Us</h3>
+    <div class="social-icons">
+  
+      <a href="#" class="social-icon"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#" class="social-icon"><img src="images/twitter.png" alt="Twitter"></a>
+      <a href="#" class="social-icon"><img src="images/linkedin.png" alt="LinkedIn"></a>
+    </div>
+  </div>
+</div>
+
+<!-- Нижняя часть футера -->
+<div class="footer-bottom">
+  <span>©2025 Aitucritic. All Rights Reserved</span>
+  <div class="footer-links">
+    <a href="#">Terms of Use</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Cookie Policy</a>
+  </div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</html>

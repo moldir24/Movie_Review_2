@@ -1,0 +1,153 @@
+/* profile.css */
+/* Inherits your homepage.css dark/light rules */
+
+.avatar-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid #e50914;
+  }
+  
+  .profile-section .list-group {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+    /* Dark dropdown for profile menu */
+#authLink.dropdown .dropdown-menu {
+  background-color: #1f1f1f !important; 
+  border: 1px solid #333;               
+}
+
+#authLink.dropdown .dropdown-item {
+  color: #ddd !important;               
+}
+
+#authLink.dropdown .dropdown-item:hover,
+#authLink.dropdown .dropdown-item:focus {
+  background-color: #333 !important;    
+  color: #fff !important;
+}
+
+  .list-group-item {
+    background-color: #1f1f1f;
+    color: #fff;
+    border: none;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .list-group-item .btn {
+    margin-left: 1rem;
+  }
+  
+  /* Light theme overrides */
+  body.light .list-group-item {
+    background-color: #f0f0f0;
+    color: #1f1c1c;
+  }
+  
+
+/* FOOTER СТИЛИ */
+footer {
+  background-color: #000; 
+  color: #fff;
+  padding: 2rem;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+
+.footer-col {
+  flex: 1 1 150px; 
+  margin: 0.5rem 0;
+}
+
+.footer-col h3 {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-col ul {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #040404;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.footer-col ul li a:hover {
+  opacity: 1;
+}
+
+/* Соц. иконки */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%);
+  transition: opacity 0.3s;
+}
+
+.social-icon:hover img {
+  opacity: 0.7;
+}
+
+/* Нижняя часть футера */
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f6f1f1;
+  padding-top: 1rem;
+}
+
+.footer-bottom span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #f4ecec;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}

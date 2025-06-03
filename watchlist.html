@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="watchlist.css" />
+  <title>Watchlists</title>
+</head>
+<body>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <h1 class="logo">Watchlists</h1>
+      <input class="search" type="text" placeholder="Search" />
+      <nav class="nav-links">
+        <a href="#" class="nav-link active">🏠 Home</a>
+        <a href="#" class="nav-link">📜 History</a>
+        <button class="btn-create">+ Create watchlist</button>
+      </nav>
+      <div class="my-lists">
+        <h2>My Lists</h2>
+        <a href="#" class="list-item">🎬 Movies</a>
+      </div>
+      <div class="profile-card">
+        <span class="profile-initial">M</span>
+        <span class="profile-name">Aru/Molya</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="watchlist-header">
+        <h2>Movies</h2>
+        <p class="about">About this watchlist</p>
+        <div class="stats">
+          <div class="stat-box">MOVIES ON LIST <span>10</span></div>
+          <div class="stat-box">AVERAGE SCORE <span>73</span></div>
+          <div class="stat-box">UNWATCHED RUNTIME <span>14h 30m</span></div>
+        </div>
+      </section>
+
+      <section class="movie-grid">
+        <div class="movie-card">
+          <img src="images/anora.png" alt="Anora" />
+          <p class="movie-title">Anora (2024)</p>
+          <p class="score">6.5/10</p>
+        </div>
+        <div class="movie-card">
+          <img src="images/shawshank.jpg" alt="Shawshank" />
+          <p class="movie-title">Shawshank (1994)</p>
+          <p class="score">9.1/10</p>
+        </div>
+        <div class="movie-card">
+          <img src="images/captainamerica.png" alt="Captain America" />
+          <p class="movie-title">Captain America (2011)</p>
+          <p class="score">6.7/10</p>
+        </div>
+     
+      </section>
+
+      <div class="pagination">
+        <button class="page-btn">« Prev</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">Next »</button>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <!-- Колонка 1: Home -->
+      <div class="footer-col">
+        <h3>Home</h3>
+        <ul>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+  
+      <!-- Колонка 2: Movies -->
+      <div class="footer-col">
+        <h3>Movies</h3>
+        <ul>
+          <li><a href="#">Genres</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">New Release</a></li>
+          <li><a href="#">Popular</a></li>
+        </ul>
+      </div>
+  
+      <!-- Колонка 3: Shows -->
+      <div class="footer-col">
+        <h3>Shows</h3>
+        <ul>
+          <li><a href="#">Genres</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">New Release</a></li>
+          <li><a href="#">Popular</a></li>
+        </ul>
+      </div>
+  
+      <!-- Колонка 4: Support -->
+      <div class="footer-col">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="support.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Колонка 5: Connect With Us -->
+      <div class="footer-col">
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+        
+          <a href="#" class="social-icon"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="#" class="social-icon"><img src="images/twitter.png" alt="Twitter"></a>
+          <a href="#" class="social-icon"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Нижняя часть футера -->
+    <div class="footer-bottom">
+      <span>©2025 Aitucritic. All Rights Reserved</span>
+      <div class="footer-links">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+  <script src="watchlist.js"></script>
+    <!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
